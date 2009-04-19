@@ -1,41 +1,41 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Diverses options
 """"""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible                                  " désactivation de la compatibilité avec vi
+set nocompatible                                  " dÃ©sactivation de la compatibilitÃ© avec vi
 set background=dark                               " fond sombre
 colorscheme desert                                " couleur
 set guifont=Monospace\ 8
 syntax enable                                     " activation de la coloration syntaxique
-set number                                        " numérotation des lignes
-set autoindent                                    " indentation automatique avancée
+set number                                        " numÃ©rotation des lignes
+set autoindent                                    " indentation automatique avancÃ©e
 set smartindent                                   " indentation plus intelligente
 set laststatus=2                                  " ajoute une barre de status
-set backspace=indent,eol,start                    " autorisation du retour arrière
+set backspace=indent,eol,start                    " autorisation du retour arriÃ¨re
 set history=50                                    " historique de 50 commandes
 set ruler                                         " affiche la position courante au sein du fichier
 set showcmd                                       " affiche la commande en cours
 set shiftwidth=4                                  " nombre de tabulation pour l'indentation
 set softtabstop=4				  " nombre d'espace pour la tabulation
-set showmatch                                     " vérification présence ([ ou { à la frappe de )] ou }
-filetype plugin indent on                         " détection automatique du type de fichier
-autocmd FileType text setlocal textwidth=72       " les fichiers de type .txt sont limites à 72 caractères par ligne
-autocmd FileType todo setlocal textwidth=72       " les fichiers de type .todo sont limites à 72 caractères par ligne
+set showmatch                                     " vÃ©rification prÃ©sence ([ ou { Ã  la frappe de )] ou }
+filetype plugin indent on                         " dÃ©tection automatique du type de fichier
+autocmd FileType text setlocal textwidth=72       " les fichiers de type .txt sont limites Ã  72 caractÃ¨res par ligne
+autocmd FileType todo setlocal textwidth=72       " les fichiers de type .todo sont limites Ã  72 caractÃ¨res par ligne
 set fileformats=unix,mac,dos                      " gestion des retours chariot en fonction du type de fichier
-set viewdir=/home/thoas/.vim/saveview/        " répertoire pour sauvegarder les vues, utiles pour les replis manuels
+set viewdir=/home/thoas/.vim/saveview/        " rÃ©pertoire pour sauvegarder les vues, utiles pour les replis manuels
 "set cursorline                                   " afficher la ligne courante
 "hi CursorLine guibg=#4d4d4d                      " couleur de fond pour la ligne courante
-set foldcolumn=2                                  " repère visuel pour les folds
+set foldcolumn=2                                  " repÃ¨re visuel pour les folds
 "set guioptions-=T                                " supprime la barre d'outils
-set incsearch                                     " recherche incrémentale
-set hlsearch                                      " surligne les résultats de la recherche
+set incsearch                                     " recherche incrÃ©mentale
+set hlsearch                                      " surligne les rÃ©sultats de la recherche
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Mapping pour désactiver le surlignage des
-"résultats d'une recherche
+"Mapping pour dÃ©sactiver le surlignage des
+"rÃ©sultats d'une recherche
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <C-N> :noh<CR>
 inoremap <Nul> <C-x><C-o>
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Mapping pour naviguer dans les lignes coupées
+"Mapping pour naviguer dans les lignes coupÃ©es
 """"""""""""""""""""""""""""""""""""""""""""""""""
 map <A-DOWN> gj
 map <A-UP> gk
@@ -64,7 +64,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 "set statusline=%t%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [FENC=%{&fileencoding}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\ [TAG=%{Tlist_Get_Tagname_By_Line()}]
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Mapping pour l'activation de l'explorateur
-"système
+"systÃ¨me
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <F9> :NERDTree<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,9 +72,9 @@ nnoremap <silent> <F9> :NERDTree<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> <C-Q> :quit<CR>
-"let Tlist_Exit_OnlyWindow = 1		" vim se ferme si il reste uniquement la fenêtre des tags
+"let Tlist_Exit_OnlyWindow = 1		" vim se ferme si il reste uniquement la fenÃªtre des tags
 "let Tlist_Process_File_Always = 1	" activation permanente du plugin pour la barre de statut
-"let Tlist_Use_Right_Window = 1		" affiche les tags sur le côté droit de l'écran
+"let Tlist_Use_Right_Window = 1		" affiche les tags sur le cÃ´tÃ© droit de l'Ã©cran
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Sauvegarde automatique des vues, utiles pour les
 "replis manuels
@@ -104,15 +104,15 @@ au BufWinEnter *.tex silent loadview
 au BufWinLeave *.xml mkview
 au BufWinEnter *.xml silent loadview
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Map pour se déplacer dans les onglets
+"Map pour se dÃ©placer dans les onglets
 """"""""""""""""""""""""""""""""""""""""""""""""""
 map <tab> gt
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Mapping pour insérer la date du jour
+"Mapping pour insÃ©rer la date du jour
 """"""""""""""""""""""""""""""""""""""""""""""""""
 imap \date  <C-R>=strftime("%d/%m/%Y")<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Complétion par tabulation
+"ComplÃ©tion par tabulation
 """"""""""""""""""""""""""""""""""""""""""""""""""
 function! CleverTab()
     "check if at beginning of line of after a space
@@ -126,7 +126,7 @@ endfunction
 "Mapping sur la touche Tab
 inoremap <Tab> <C-R>=CleverTab()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
-"Dictionnaire français
+"Dictionnaire franÃ§ais
 "Liste des propositions par CTRL-X_CTRL-K
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set dictionary+=/usr/share/dict/french
@@ -134,7 +134,7 @@ set dictionary+=/usr/share/dict/french
 "Correction orthographique
 "Liste des propositions par CTRL-X_s
 """"""""""""""""""""""""""""""""""""""""""""""""""
-set spellsuggest=5                                   " on affiche uniquement les 5 premières propositions 
+set spellsuggest=5                                   " on affiche uniquement les 5 premiÃ¨res propositions 
 autocmd BufEnter *.txt set spell                     " correction orthographique dans les fichiers textes
 autocmd BufEnter *.txt set spelllang=fr              " correction orthographique dans les fichiers textes
 """"""""""""""""""""""""""""""""""""""""""""""""""
