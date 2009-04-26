@@ -165,8 +165,8 @@ function! FoldSpellBalloon()
     "Return result
     return join(lines, has("balloon_multiline") ? "\n" : " ")
 endfunction
-set balloonexpr=FoldSpellBalloon()
-set ballooneval
+"set balloonexpr=FoldSpellBalloon()
+"set ballooneval
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Nom du fichier en cours dans l'onglet pour GVim
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -236,8 +236,7 @@ set foldtext=MyFoldFunction()
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Poser une marque visible avec F7
 """"""""""""""""""""""""""""""""""""""""""""""""""
-hi Mark guibg=indianred guifg=white gui=bold cterm=bold ctermfg=7 ctermbg=1
-sign define mark text=!> texthl=Mark
+"sign define mark text=!> texthl=Mark
 map <F7> :exe 'sign place 001 name=mark line='.line(".").' buffer='.winbufnr(0)<CR>
 map <C-F7> :sign unplace<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""
