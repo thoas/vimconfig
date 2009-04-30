@@ -17,11 +17,11 @@ set showcmd                                       " affiche la commande en cours
 set shiftwidth=4                                  " nombre de tabulation pour l'indentation
 set softtabstop=4				  " nombre d'espace pour la tabulation
 set showmatch                                     " vérification présence ([ ou { à la frappe de )] ou }
+set viewdir=~/.vim/saveview/        " répertoire pour sauvegarder les vues, utiles pour les replis manuels
 filetype plugin indent on                         " détection automatique du type de fichier
 autocmd FileType text setlocal textwidth=72       " les fichiers de type .txt sont limites à 72 caractères par ligne
 autocmd FileType todo setlocal textwidth=72       " les fichiers de type .todo sont limites à 72 caractères par ligne
 set fileformats=unix,mac,dos                      " gestion des retours chariot en fonction du type de fichier
-set viewdir=/home/thoas/.vim/saveview/        " répertoire pour sauvegarder les vues, utiles pour les replis manuels
 "set cursorline                                   " afficher la ligne courante
 "hi CursorLine guibg=#4d4d4d                      " couleur de fond pour la ligne courante
 set foldcolumn=2                                  " repère visuel pour les folds
