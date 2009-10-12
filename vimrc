@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Diverses options
 """"""""""""""""""""""""""""""""""""""""""""""""""
+set encoding=utf-8
 set nocompatible                                  " désactivation de la compatibilité avec vi
 set background=dark                               " fond sombre
 colorscheme desert                                " couleur
@@ -15,12 +16,14 @@ set history=50                                    " historique de 50 commandes
 set ruler                                         " affiche la position courante au sein du fichier
 set showcmd                                       " affiche la commande en cours
 set shiftwidth=4                                  " nombre de tabulation pour l'indentation
-set softtabstop=4				  " nombre d'espace pour la tabulation
+set tabstop=4
+set expandtab
 set showmatch                                     " vérification présence ([ ou { à la frappe de )] ou }
 set viewdir=~/.vim/saveview/        " répertoire pour sauvegarder les vues, utiles pour les replis manuels
 filetype plugin indent on                         " détection automatique du type de fichier
 autocmd FileType text setlocal textwidth=72       " les fichiers de type .txt sont limites à 72 caractères par ligne
 autocmd FileType todo setlocal textwidth=72       " les fichiers de type .todo sont limites à 72 caractères par ligne
+autocmd FileType python setlocal textwidth=80       " les fichiers de type .todo sont limites à 72 caractères par ligne
 set fileformats=unix,mac,dos                      " gestion des retours chariot en fonction du type de fichier
 "set cursorline                                   " afficher la ligne courante
 "hi CursorLine guibg=#4d4d4d                      " couleur de fond pour la ligne courante
@@ -34,6 +37,7 @@ set hlsearch                                      " surligne les résultats de l
 """"""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <C-N> :noh<CR>
 inoremap <Nul> <C-x><C-o>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 "Mapping pour naviguer dans les lignes coupées
 """"""""""""""""""""""""""""""""""""""""""""""""""
