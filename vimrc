@@ -49,6 +49,9 @@ imap <A-DOWN> <ESC>gkj
 """"""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufEnter *.txt set filetype=text             " chargement du type de fichier pour le format txt
 autocmd BufEnter *.todo set filetype=todo            " chargement du type de fichier pour le format todo
+autocmd FileType python set ft=python.django         " For SnipMate
+autocmd FileType html set ft=html.django_template    " For SnipMate
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 "Omni-completion par CTRL-X_CTRL-O
 """"""""""""""""""""""""""""""""""""""""""""""""""
