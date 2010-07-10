@@ -5,9 +5,6 @@ map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-noremap <leader>n :NERDTreeToggle<CR>
-noremap <leader>t :TlistToggle<CR>
-
 " Remove support for regular arrow key
 nnoremap <Up> <Esc>
 vnoremap <Up> <NOP>
@@ -39,8 +36,6 @@ imap <A-DOWN> <ESC>gkj
 
 nmap <Space> <PageDown>
 
-nnoremap <silent> <F9> :NERDTree<CR>
-nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> <C-Q> :quit<CR>
 
 map <tab> gt
@@ -96,3 +91,6 @@ nmap <D-k> gk
 nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
+
+:autocmd FileType php set makeprg=php\ -l\ %
+:autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l

@@ -5,6 +5,7 @@ hi CursorLine guibg=#4d4d4d
 set encoding=utf-8
 set fileencoding=utf-8
 set nocompatible
+set splitright
 
 set background=dark
 set guifont=Monaco:h11
@@ -24,6 +25,9 @@ set viewdir=~/.vim/saveview/
 set fileformats=unix,mac,dos
 set cursorline
 set foldcolumn=2
+
+" to write swap file to disk after 50 keystrokes
+set updatecount=50
 
 set incsearch
 set hlsearch
@@ -57,11 +61,12 @@ set statusline+=%3*col:%4*%c\ \
 set statusline+=%3*line:%4*%l\ \ 
 set statusline+=%3*total:%4*%L\
 
-let g:NERDTreeWinPos = "right"
+"
+" Syntax options
+"
 
-let Tlist_Ctags_Cmd="/opt/local/bin/ctags"
-let Tlist_Auto_Open=0
-let Tlist_Use_Right_Window=0
-let Tlist_Sort_Type="name"
-let Tlist_Show_One_File=1
-let tlist_php_settings = 'php;c:class;d:constant;f:function'
+" Do not use short tags to find PHP blocks
+let php_noShortTags = 1
+
+" Highlighti SQL inside PHP strings
+let php_sql_query=1

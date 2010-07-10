@@ -98,7 +98,7 @@ vnoremap <C-d> :call PhpUnComment()<CR>
 
 " The completion dictionary is provided by Rasmus:
 " http://lerdorf.com/funclist.txt
-set dictionary-=/home/thoas/.vim/phpfunclist.txt dictionary+=/home/thoas/.vim/phpfunclist.txt
+set dictionary-=~/.vim/phpfunclist.txt dictionary+=~/.vim/phpfunclist.txt
 " Use the dictionary completion
 set complete-=k complete+=k
 

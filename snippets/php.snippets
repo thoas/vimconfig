@@ -1,8 +1,6 @@
 snippet php
-	<?php
-	${1}
-	?>
-snippet ec
+	<?php ${1} ?>
+snippet echo
 	echo "${1:string}"${2};
 snippet inc
 	include '${1:file}';${2}
@@ -21,7 +19,7 @@ snippet $_ ENV['...']
 	$_ENV['${1:variable}']${2}
 snippet $_ FILES['...']
 	$_FILES['${1:variable}']${2}
-snippet $_ Get['...']
+snippet $_ GET['...']
 	$_GET['${1:variable}']${2}
 snippet $_ POST['...']
 	$_POST['${1:variable}']${2}
@@ -182,7 +180,7 @@ snippet elseif
 		${2:// code...}
 	}
 # Tertiary conditional
-snippet t
+snippet ternary
 	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
 snippet switch
 	switch ($${1:variable}) {
