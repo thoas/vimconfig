@@ -38,6 +38,7 @@ if has("autocmd")
 
   au! BufRead,BufNewFile *.py                     setfiletype python
   au! BufRead,BufNewFile *.php                    setfiletype php
+  au! BufRead,BufNewFile *.phps                   setfiletype php
   au! BufRead,BufNewFile *.tpl.html               setfiletype php
   au! BufRead,BufNewFile *.phtml                  setfiletype php
 

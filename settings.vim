@@ -38,6 +38,7 @@ set listchars=tab:▸\ ,eol:¬
 
 set dictionary+=/usr/share/dict/french
 set spellsuggest=5
+set langmenu=en_US.UTF-8
 
 set statusline=%3*[%1*%{GetName()}%3*]%3*
 set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
@@ -55,3 +56,12 @@ set statusline+=%=
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
 set statusline+=%3*total:%4*%L\
+
+let g:NERDTreeWinPos = "right"
+
+let Tlist_Ctags_Cmd="/opt/local/bin/ctags"
+let Tlist_Auto_Open=0
+let Tlist_Use_Right_Window=0
+let Tlist_Sort_Type="name"
+let Tlist_Show_One_File=1
+let tlist_php_settings = 'php;c:class;d:constant;f:function'

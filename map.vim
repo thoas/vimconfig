@@ -1,8 +1,12 @@
 let mapleader=','
+
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader>t :TlistToggle<CR>
 
 " Remove support for regular arrow key
 nnoremap <Up> <Esc>
@@ -32,6 +36,8 @@ map <A-DOWN> gj
 map <A-UP> gk
 imap <A-UP> <ESC>gki
 imap <A-DOWN> <ESC>gkj
+
+nmap <Space> <PageDown>
 
 nnoremap <silent> <F9> :NERDTree<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
