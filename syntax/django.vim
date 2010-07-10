@@ -11,6 +11,17 @@ elseif exists("b:current_syntax")
   finish
 endif
 
+if !exists("main_syntax")
+  let main_syntax = 'python'
+endif
+
+if version < 600
+  so <sfile>:p:h/python.vim
+else
+  runtime! syntax/python.vim
+  unlet b:current_syntax
+endif
+
 syntax case match
 
 " Mark illegal characters
