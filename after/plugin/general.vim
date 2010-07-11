@@ -27,6 +27,13 @@ if exists('loaded_supertab')
     let g:SuperTabMappingForward = "<C-Space>"
 endif
 
+if exists('loaded_minibufexpl')
+    let g:miniBufExplMapWindowNavVim = 1 
+    let g:miniBufExplMapWindowNavArrows = 1 
+    let g:miniBufExplMapCTabSwitchBufs = 1 
+    let g:miniBufExplModSelTarget = 1
+endif
+
 " Set Project options
 if exists('loaded_project')
     let g:proj_run1='!php -l %f' 

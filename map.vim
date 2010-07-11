@@ -1,3 +1,4 @@
+let g:mapleader = ","
 let mapleader=','
 
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
@@ -22,13 +23,17 @@ inoremap <Right> <NOP>
 nnoremap <silent> <C-N> :noh<CR>
 inoremap <Nul> <C-x><C-o>
 
+" Navigate into window with standard hjkl
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 noremap <C-K> <C-W>k
 noremap <C-J> <C-W>j
 
+" In normal mode, basic save
 nmap <c-s> :w<CR>
+" In interactive mode, basic save and retrieve cursor position
 imap <c-s> <Esc>:w<CR>a
+
 map <A-DOWN> gj
 map <A-UP> gk
 imap <A-UP> <ESC>gki
@@ -97,3 +102,6 @@ nmap <D-0> g^
 
 noremap <D-w> :bdelete<CR>
 noremap <D-t> :CommandT<CR>
+
+noremap <C-left> :bprev<CR>
+noremap <C-right> :bnext<CR>

@@ -9,6 +9,7 @@ set fileencoding=utf-8
 set nocompatible
 set splitright
 
+set iskeyword+=_,$,@,%,#
 set background=dark
 set guifont=Monaco:h11
 set number
@@ -60,8 +61,7 @@ set statusline+=%<%3*pwd:%4*%{getcwd()}\ \
 set statusline+=%=
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
-set statusline+=%3*total:%4*%L\
-
+set statusline+=%3*total:%4*%L\ 
 "
 " Syntax options for php
 "
