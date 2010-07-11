@@ -1,6 +1,8 @@
 syntax on
 colorscheme ir_black
-hi CursorLine guibg=#4d4d4d
+
+" set cursorline
+" hi CursorLine guibg=#4d4d4d
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -23,7 +25,6 @@ set showtabline=2
 set showmatch
 set viewdir=~/.vim/saveview/
 set fileformats=unix,mac,dos
-set cursorline
 set foldcolumn=2
 
 " to write swap file to disk after 50 keystrokes
