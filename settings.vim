@@ -63,7 +63,7 @@ set statusline+=%3*line:%4*%l\ \
 set statusline+=%3*total:%4*%L\
 
 "
-" Syntax options
+" Syntax options for php
 "
 
 " Do not use short tags to find PHP blocks

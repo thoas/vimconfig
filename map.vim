@@ -94,3 +94,6 @@ nmap <D-0> g^
 
 :autocmd FileType php set makeprg=php\ -l\ %
 :autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
+
+noremap <D-w> :bdelete<CR>
+noremap <D-t> :CommandT<CR>

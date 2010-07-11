@@ -1,0 +1,9 @@
+Daily inspiration:
+
+* [remiprev/vimfiles](http://github.com/remiprev/vimfiles)
+* [marcw/vim-config](http://github.com/marcw/vim-config)
+* [andreiz/vim-settings](http://github.com/andreiz/vim-settings)
+* [shingara/vimconfig](http://github.com/shingara/vimconfig)
+* [rtomayko/dotfiles](http://github.com/rtomayko/dotfiles)
+
+Thanks to them.
