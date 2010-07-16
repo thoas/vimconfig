@@ -53,6 +53,7 @@ nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+nmap <C-S-D> :dd<CR>
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -63,6 +64,11 @@ map <C-F7> :sign unplace<CR>
 " Duplicate the line
 noremap <D-d> m'yyP`'k
 vnoremap <D-d> m'y'>p`'
+noremap <C-S-d> m'yyP`'k
+vnoremap <C-S-d> m'y'>p`'
+
+" Delete the line
+noremap <C-S-k> dd
 
 " C-TAB and C-SHIFT-TAB cycle tabs forward and backward
 nmap <c-tab> :tabnext<cr>
@@ -72,9 +78,11 @@ nmap <c-s-tab> :tabprevious<cr>
 imap <c-s-tab> <c-o>:tabprevious<cr>
 vmap <c-s-tab> <c-o>:tabprevious<cr>
 
-" For mac users (using the 'apple' key)
+" Navigate into tabs with 
 map <D-S-]> gt
+map <D-A-Left> gt
 map <D-S-[> gT
+map <D-A-Right> gT
 map <D-1> 1gt
 map <D-2> 2gt
 map <D-3> 3gt
@@ -97,11 +105,23 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
+" save changes
+map <leader>s :w<CR>
+" exit vim without saving any changes
+map <leader>q :q!<CR>
+" exit vim saving changes
+map <leader>w :x<CR>
+
 :autocmd FileType php set makeprg=php\ -l\ %
 :autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
 
+" Delete the current buffer with  + T
 noremap <D-w> :bdelete<CR>
 noremap <D-t> :CommandT<CR>
 
+" Navigate into buffers with CTRL-LEFT and CTRL-RIGHT
 noremap <C-left> :bprev<CR>
 noremap <C-right> :bnext<CR>
+
+" TextMate autoclose mapping
+inoremap <D-A-.> <C-R>=GetCloseTag()<CR>

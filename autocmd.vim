@@ -10,24 +10,24 @@ if has("autocmd")
   filetype plugin on
  
   " Syntax of these languages is fussy over tabs Vs spaces
-  autocmd FileType make setlocal               ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType yaml setlocal               ts=2 sts=2 sw=2 expandtab
+  autocmd FileType make setlocal                  ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType yaml setlocal                  ts=2 sts=2 sw=2 expandtab
  
   " Customisations based on house-style (arbitrary)
-  autocmd FileType html                        setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType css                         setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType javascript                  setlocal ts=4 sts=4 sw=4 noexpandtab
+  autocmd FileType html                           setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType css                            setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType javascript                     setlocal ts=4 sts=4 sw=4 noexpandtab
  
   " Treat .rss files as XML
-  autocmd BufNewFile,BufRead *.rss             setfiletype xml
+  autocmd BufNewFile,BufRead *.rss                setfiletype xml
   
-  autocmd FileType text                        setlocal textwidth=72
-  autocmd FileType todo                        setlocal textwidth=72
-  autocmd FileType python                      setlocal textwidth=80
-  autocmd FileType php                         setlocal textwidth=120
+  autocmd FileType text                           setlocal textwidth=72
+  autocmd FileType todo                           setlocal textwidth=72
+  autocmd FileType python                         setlocal textwidth=80
+  autocmd FileType php                            setlocal textwidth=120
   
-  autocmd BufEnter *.txt                       set spell
-  autocmd BufEnter *.txt                       set spelllang=fr
+  autocmd BufEnter *.txt                          set spell
+  autocmd BufEnter *.txt                          set spelllang=fr
   
   au filetype html                                set omnifunc=htmlcomplete#CompleteTags
   au filetype css                                 set omnifunc=csscomplete#CompleteCSS

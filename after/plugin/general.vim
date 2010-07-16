@@ -24,6 +24,7 @@ if exists('loaded_nerd_tree')
 endif
 
 if exists('loaded_supertab')
+    " Use CTRL-SPACE for omni completion
     let g:SuperTabMappingForward = "<C-Space>"
 endif
 
@@ -32,6 +33,10 @@ if exists('loaded_minibufexpl')
     let g:miniBufExplMapWindowNavArrows = 1 
     let g:miniBufExplMapCTabSwitchBufs = 1 
     let g:miniBufExplModSelTarget = 1
+endif
+
+if exists('loaded_autoclose')
+    nmap <leader>x <Plug>ToggleAutoCloseMappings
 endif
 
 " Set Project options

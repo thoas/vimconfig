@@ -1,6 +1,8 @@
 syntax on
 colorscheme ir_black
 
+set t_Co=256
+
 " set cursorline
 " hi CursorLine guibg=#4d4d4d
 
@@ -46,6 +48,7 @@ set dictionary+=/usr/share/dict/french
 set spellsuggest=5
 set langmenu=en_US.UTF-8
 
+" Statusline
 set statusline=%3*[%1*%{GetName()}%3*]%3*
 set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
 set statusline+=%5*%{IsHelp()}%3*
@@ -62,6 +65,13 @@ set statusline+=%=
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
 set statusline+=%3*total:%4*%L\ 
+
+" Ignore certain types of files on completion
+set wildignore+=*.o,*.obj,*.pyc,.git,.svn
+
+" Fix my <Backspace> key (in Mac OS X Terminal)
+set t_kb=fixdel
+
 "
 " Syntax options for php
 "
