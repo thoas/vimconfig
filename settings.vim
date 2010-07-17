@@ -11,6 +11,10 @@ set fileencoding=utf-8
 set nocompatible
 set splitright
 
+set nobackup
+" to write swap file to disk after 50 keystrokes
+set updatecount=50
+
 set iskeyword+=_,$,@,%,#
 set background=dark
 set guifont=Monaco:h11
@@ -29,9 +33,6 @@ set showmatch
 set viewdir=~/.vim/saveview/
 set fileformats=unix,mac,dos
 set foldcolumn=2
-
-" to write swap file to disk after 50 keystrokes
-set updatecount=50
 
 set incsearch
 set hlsearch
@@ -71,13 +72,3 @@ set wildignore+=*.o,*.obj,*.pyc,.git,.svn
 
 " Fix my <Backspace> key (in Mac OS X Terminal)
 set t_kb=fixdel
-
-"
-" Syntax options for php
-"
-
-" Do not use short tags to find PHP blocks
-let php_noShortTags = 1
-
-" Highlighti SQL inside PHP strings
-let php_sql_query=1

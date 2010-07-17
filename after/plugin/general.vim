@@ -9,8 +9,10 @@ if exists('loaded_taglist')
     let Tlist_Use_Right_Window=1
     let Tlist_Sort_Type="name"
     let Tlist_Show_One_File=1
+    let Tlist_Process_File_Always = 1
     
     noremap <leader>t :TlistToggle<CR>
+    noremap <D-S-T> :TlistToggle<CR>
     nnoremap <silent> <F8> :TlistToggle<CR>
 endif
 
@@ -30,6 +32,7 @@ endif
 if exists('loaded_supertab')
     " Use CTRL-SPACE for omni completion
     let g:SuperTabMappingForward = "<C-Space>"
+    imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-p>")<cr>
 endif
 
 if exists('loaded_minibufexpl')
@@ -39,7 +42,7 @@ if exists('loaded_minibufexpl')
     let g:miniBufExplModSelTarget = 1
 endif
 
-if exists('loaded_autoclose')
+if exists('g:autoclose_loaded')
     nmap <leader>x <Plug>ToggleAutoCloseMappings
 endif
 

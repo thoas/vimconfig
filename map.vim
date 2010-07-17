@@ -112,9 +112,6 @@ map <leader>q :q!<CR>
 " exit vim saving changes
 map <leader>w :x<CR>
 
-:autocmd FileType php set makeprg=php\ -l\ %
-:autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
-
 " Delete the current buffer with  + T
 noremap <D-w> :bdelete<CR>
 noremap <D-t> :CommandT<CR>

@@ -47,10 +47,10 @@ noremap § :s/\([^;]\)$/\1;/<cr>
 " noremap <C-P> :w!<CR>:!php5 %<CR>
 
 " Map <ctrl>+p to single line mode documentation (in insert and command mode)
-inoremap <C-P> :call PhpDocSingle()<CR>i
-nnoremap <C-P> :call PhpDocSingle()<CR>
+" inoremap <C-P> :call PhpDocSingle()<CR>i
+" nnoremap <C-P> :call PhpDocSingle()<CR>
 " Map <ctrl>+p to multi line mode documentation (in visual mode)
-vnoremap <C-P> :call PhpDocRange()<CR>
+" vnoremap <C-P> :call PhpDocRange()<CR>
 
 " Map <CTRL>-H to search phpm for the function name currently under the cursor (insert mode only)
 inoremap <C-H> <ESC>:!phpm <C-R>=expand("<cword>")<CR><CR>
@@ -59,21 +59,21 @@ inoremap <C-H> <ESC>:!phpm <C-R>=expand("<cword>")<CR><CR>
 vnoremap <C-a> :call PhpAlign()<CR>
 
 " Map <CTRL>-a to (un-)comment function
-vnoremap <C-d> :call PhpUnComment()<CR>
+" vnoremap <C-d> :call PhpUnComment()<CR>
 
 " }}}
 
 " {{{ Automatic close char mapping
 
 " More common in PEAR coding standard
-"inoremap  { {<CR>}<C-O>O
+inoremap  { {<CR>}<C-O>O
 " Maybe this way in other coding standards
 " inoremap  { <CR>{<CR>}<C-O>O
 
-"inoremap [ []<LEFT>
+" inoremap [ []<LEFT>
 
 " Standard mapping after PEAR coding standard
-"inoremap ( (  )<LEFT><LEFT>
+" inoremap ( (  )<LEFT><LEFT>
 
 " Maybe this way in other coding standards
 " inoremap ( ( )<LEFT><LEFT>
@@ -118,7 +118,7 @@ func! InsertTabWrapper()
 endfunction
 
 " Remap the tab key to select action with InsertTabWrapper
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+" inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " }}} Autocompletion using the TAB key
 

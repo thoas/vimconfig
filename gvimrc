@@ -1,7 +1,7 @@
 " Transparence
-set transp=20
-set transp=10
-set transp=5
+" set transp=20
+" set transp=10
+" set transp=5
 " set transp=2
 
 set fuoptions=maxvert,maxhorz

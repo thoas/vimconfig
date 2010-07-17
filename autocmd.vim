@@ -1,7 +1,3 @@
-if exists("did\_load\_filetypes")
-    finish
-endif
-
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
   " Enable file type detection
