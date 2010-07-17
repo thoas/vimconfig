@@ -231,7 +231,7 @@ function s:SetUpForNewFiletype(filetype, forceReset)
         call s:MapDelimiters('#', '')
     elseif a:filetype ==? "diff"
         call s:MapDelimiters('#', '')
-    elseif a:filetype ==? "django"
+    elseif a:filetype ==? "htmldjango"
         call s:MapDelimitersWithAlternative('<!--','-->', '{#', '#}')
     elseif a:filetype ==? "docbk"
         call s:MapDelimiters('<!--', '-->')
