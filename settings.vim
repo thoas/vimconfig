@@ -1,7 +1,7 @@
 syntax on
 colorscheme ir_black
 
-set t_Co=256
+" set t_Co=256
 
 " set cursorline
 " hi CursorLine guibg=#4d4d4d
@@ -71,4 +71,4 @@ set statusline+=%3*total:%4*%L\
 set wildignore+=*.o,*.obj,*.pyc,.git,.svn
 
 " Fix my <Backspace> key (in Mac OS X Terminal)
-set t_kb=fixdel
+" set t_kb=fixdel
