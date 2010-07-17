@@ -23,6 +23,10 @@ if exists('loaded_nerd_tree')
     nnoremap <silent> <F9> :NERDTree<CR>
 endif
 
+if exists('loaded_nerd_comments')
+    map <D-S-/> <plug>NERDCommenterToggle
+endif
+
 if exists('loaded_supertab')
     " Use CTRL-SPACE for omni completion
     let g:SuperTabMappingForward = "<C-Space>"

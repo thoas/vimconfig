@@ -505,6 +505,10 @@ function s:SetUpForNewFiletype(filetype, forceReset)
         call s:MapDelimiters('//', '')
     elseif a:filetype ==? "php"
         call s:MapDelimitersWithAlternative('//','','/*', '*/')
+    elseif a:filetype ==? "python"
+        call s:MapDelimitersWithAlternative('#','','"""', '"""')
+    elseif a:filetype ==? "django"
+        call s:MapDelimitersWithAlternative('#','','"""', '"""')
     elseif a:filetype ==? "pic"
         call s:MapDelimiters(';', '')
     elseif a:filetype ==? "pike"
