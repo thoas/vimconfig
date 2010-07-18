@@ -76,7 +76,7 @@ else
 		let s:installation	= 'system'
 	else
 		" user installation assumed
-		let s:plugin_dir  = $HOME.'/.vim/'
+		let s:plugin_dir  = $HOME.'/.vim/bundle/cvim/'
 	endif
 	"
 	let s:C_CodeSnippets   = $HOME.'/.vim/c-support/codesnippets/'

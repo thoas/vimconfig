@@ -2,7 +2,7 @@
 " No copyright, feel free to use this, as you like.
 
 " Including PDV
-source ~/.vim/php-doc.vim
+source ~/.vim/bundle/php/php-doc.vim
 
 " {{{ Settings
 
@@ -98,7 +98,7 @@ inoremap  { {<CR>}<C-O>O
 
 " The completion dictionary is provided by Rasmus:
 " http://lerdorf.com/funclist.txt
-set dictionary-=~/.vim/phpfunclist.txt dictionary+=~/.vim/phpfunclist.txt
+set dictionary-=~/.vim/bundle/php/phpfunclist.txt dictionary+=~/.vim/bundle/php/phpfunclist.txt
 " Use the dictionary completion
 set complete-=k complete+=k
 
