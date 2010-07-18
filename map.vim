@@ -1,10 +1,12 @@
 let g:mapleader = ","
 let mapleader=','
 
+" Open a file with the current directory of the current file which is editing {{{
 map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
 map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" }}}
 
 " Remove support for regular arrow key {{{
 nnoremap <Up> <Esc>
@@ -21,7 +23,10 @@ vnoremap <Right> <NOP>
 inoremap <Right> <NOP>
 " }}}
 
+" Stop the highlighting for the 'hlsearch' option {{{
 nnoremap <silent> <C-N> :noh<CR>
+" }}}
+
 inoremap <Nul> <C-x><C-o>
 
 " Navigate into window with standard hjkl {{{
@@ -125,7 +130,9 @@ map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
 map <D-0> :tablast<CR>
+" }}}
 
+" Easy navigation with  when a line is wrapped {{{
 vmap <D-j> gj
 vmap <D-k> gk
 vmap <D-4> g$
@@ -136,7 +143,6 @@ nmap <D-k> gk
 nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
-
 " }}}
 
 " Save changes {{{

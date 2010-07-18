@@ -1,4 +1,4 @@
-" Only do this part when compiled with support for autocommands
+" Only do this part when compiled with support for autocommands {{{
 if has("autocmd")
   " Enable file type detection
   filetype on
@@ -55,3 +55,4 @@ if has("autocmd")
   autocmd BufEnter *.txt                          set filetype=text
   autocmd BufEnter *.todo                         set filetype=todo
 endif
+" }}}
