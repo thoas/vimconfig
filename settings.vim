@@ -1,5 +1,11 @@
-syntax on
-colorscheme ir_black
+if has('gui_running')
+    syntax on
+    colorscheme ir_black
+else
+    syntax on
+    colorscheme desert
+endif
+
 set background=dark
 
 " set t_Co=256
@@ -43,7 +49,7 @@ set smartindent
 set showtabline=2
 set showmatch
 set viewdir=~/.vim/saveview/
-set fileformats=unix,mac,dos
+set fileformats=unix
 set foldcolumn=2
 
 set incsearch

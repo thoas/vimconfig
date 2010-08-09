@@ -29,13 +29,6 @@ nnoremap <silent> <C-N> :noh<CR>
 
 inoremap <Nul> <C-x><C-o>
 
-" Navigate into window with standard hjkl {{{
-noremap <C-H> <C-W>h
-noremap <C-L> <C-W>l
-noremap <C-K> <C-W>k
-noremap <C-J> <C-W>j
-" }}}
-
 " In normal mode, basic save {{{
 nmap <c-s> :w<CR>
 " }}}
@@ -98,7 +91,7 @@ vnoremap <C-S-d> m'y'>p`'
 " }}}
 
 " Delete the line
-noremap <C-S-k> dd
+" noremap <C-S-k> dd
 
 " C-TAB and C-SHIFT-TAB cycle tabs forward and backward
 nmap <c-tab> :tabnext<cr>

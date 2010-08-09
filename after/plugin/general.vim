@@ -35,11 +35,13 @@ if exists('loaded_supertab')
     imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-p>")<cr>
 endif
 
-if exists('loaded_minibufexpl')
+if exists('loaded_minibufexplorer')
+    " Navigate into window with standard hjkl
     let g:miniBufExplMapWindowNavVim = 1 
     let g:miniBufExplMapWindowNavArrows = 1 
-    let g:miniBufExplMapCTabSwitchBufs = 1 
     let g:miniBufExplModSelTarget = 1
+
+    map <Leader>b :TMiniBufExplorer<cr>
 endif
 
 if exists('g:autoclose_loaded')
