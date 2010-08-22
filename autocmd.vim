@@ -10,8 +10,8 @@ if has("autocmd")
   autocmd FileType yaml setlocal                  ts=2 sts=2 sw=2 expandtab
  
   " Customisations based on house-style (arbitrary)
-  autocmd FileType html                           setlocal ts=2 sts=2 sw=2 expandtab
-  autocmd FileType css                            setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType html                           setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType css                            setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType javascript                     setlocal ts=4 sts=4 sw=4 noexpandtab
  
   " Treat .rss files as XML
@@ -22,8 +22,9 @@ if has("autocmd")
   autocmd FileType python                         setlocal textwidth=80
   autocmd FileType php                            setlocal textwidth=120
   
-  autocmd BufEnter *.txt                          set spell
-  autocmd BufEnter *.txt                          set spelllang=fr
+  " Disabled, slow on vim
+  " autocmd BufEnter *.txt                          set spell
+  " autocmd BufEnter *.txt                          set spelllang=fr
   
   au filetype html                                set omnifunc=htmlcomplete#CompleteTags
   au filetype css                                 set omnifunc=csscomplete#CompleteCSS
@@ -45,6 +46,7 @@ if has("autocmd")
   augroup markdown
       au! BufRead,BufNewFile *.mkd                setfiletype mkd
       au! BufRead,BufNewFile *.md                 setfiletype mkd
+      au! BufRead,BufNewFile *.mdown              setfiletype mkd
       au! BufRead,BufNewFile *.markdown           setfiletype mkd
   augroup END
 

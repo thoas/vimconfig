@@ -8,6 +8,10 @@ endif
 
 set background=dark
 
+" Override buffer, no save requirement when switching from on to another {{{
+set hidden
+" }}}
+
 " set t_Co=256
 
 " Set Cursorline {{{
@@ -110,3 +114,10 @@ endif
 " }}}
 
 call pathogen#runtime_append_all_bundles() 
+
+" Navigate into window with standard hjkl
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplorerMoreThanOne=1
+
+let g:debuggerMiniBufExpl = 1

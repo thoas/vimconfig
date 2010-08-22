@@ -29,9 +29,6 @@ set makeprg=php\ -l\ %
 " Use errorformat for parsing PHP error output
 set errorformat=%m\ in\ %f\ on\ line\ %l
 
-" Switch syntax highlighting on, if it was not
-syntax on
-
 " }}} Settings
 
 " {{{ Command mappings
