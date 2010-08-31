@@ -101,7 +101,7 @@ set wildignore+=*.o,*.obj,*.pyc,.git,.svn
 
 " Maximize GVim window at startup {{{
 if has("gui_running")
-  set lines=999 columns=999
+  set lines=9999 columns=9999
 else
   " This is console Vim.
   if exists("+lines")
@@ -121,3 +121,5 @@ let g:miniBufExplModSelTarget = 1
 let g:miniBufExplorerMoreThanOne=1
 
 let g:debuggerMiniBufExpl = 1
+
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.egg-info$', '\.egg-link', '\.egg']
