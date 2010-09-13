@@ -113,7 +113,7 @@ endif
 syn keyword pythonStatement	break continue del
 syn keyword pythonStatement	exec return as
 syn keyword pythonStatement	pass raise
-syn keyword pythonStatement	global assert
+syn keyword pythonStatement	global assert self
 syn keyword pythonStatement	lambda yield
 syn keyword pythonStatement	with nonlocal
 syn keyword pythonStatement	False None True

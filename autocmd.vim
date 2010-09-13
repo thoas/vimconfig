@@ -7,7 +7,7 @@ if has("autocmd")
  
   " Syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal                  ts=8 sts=8 sw=8 noexpandtab
-  autocmd FileType yaml setlocal                  ts=2 sts=2 sw=2 expandtab
+  autocmd FileType yaml setlocal                  ts=4 sts=4 sw=4 expandtab
  
   " Customisations based on house-style (arbitrary)
   autocmd FileType html                           setlocal ts=4 sts=4 sw=4 expandtab
@@ -19,7 +19,7 @@ if has("autocmd")
   
   autocmd FileType text                           setlocal textwidth=72
   autocmd FileType todo                           setlocal textwidth=72
-  autocmd FileType python                         setlocal textwidth=80
+  autocmd FileType python                         setlocal textwidth=120
   autocmd FileType php                            setlocal textwidth=120
   
   " Disabled, slow on vim

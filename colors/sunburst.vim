@@ -48,7 +48,7 @@ hi Comment      guifg=#3f3f3f               gui=italic
 hi Constant     guifg=#3387cc
 hi Directory    guifg=#3387cc
 hi LineNr       guifg=#666666 guibg=#121212
-hi Identifier   guifg=#99cf50
+hi Identifier   guifg=#92bdef
 hi SpecialKey   guifg=#e28964
 hi Type         guifg=#89bdff
 hi Statement    guifg=#e28964

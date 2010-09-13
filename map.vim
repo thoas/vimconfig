@@ -111,8 +111,8 @@ noremap <D-r> :e<CR>
 " }}}
 
 " Navigate into tabs with  {{{
-map <D-A-Left> gt
-map <D-A-Right> gT
+map <D-A-Left> gT
+map <D-A-Right> gt
 map <D-1> 1gt
 map <D-2> 2gt
 map <D-3> 3gt

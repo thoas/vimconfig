@@ -45,9 +45,9 @@ set ruler
 set showcmd
 set ts=4 sts=4 shiftwidth=4 expandtab
 
-" Automatic and smart indentation {{{
-set autoindent
-set smartindent
+" No automatic and smart indentation {{{
+set noautoindent
+set nosmartindent
 " }}}
 
 set showtabline=2
@@ -88,7 +88,7 @@ set statusline+=%<%3*pwd:%4*%{getcwd()}\ \
 set statusline+=%=
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
-set statusline+=%3*total:%4*%L\ 
+set statusline+=%3*total:%4*%L\
 " }}}
 
 " Ignore certain types of files on completion {{{
@@ -113,13 +113,16 @@ else
 endif
 " }}}
 
-call pathogen#runtime_append_all_bundles() 
+call pathogen#runtime_append_all_bundles()
 
 " Navigate into window with standard hjkl
-let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplorerMoreThanOne=1
 
 let g:debuggerMiniBufExpl = 1
+
+let python_highlight_all = 1
+let python_highlight_space_errors = 0
 
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.egg-info$', '\.egg-link', '\.egg']
