@@ -31,6 +31,7 @@ set splitright
 
 " To write swap file to disk after 50 keystrokes {{{
 set nobackup
+set noswapfile
 set updatecount=50
 " }}}
 
@@ -88,7 +89,7 @@ set statusline+=%<%3*pwd:%4*%{getcwd()}\ \
 set statusline+=%=
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
-set statusline+=%3*total:%4*%L\
+set statusline+=%3*total:%4*%L\ \ 
 " }}}
 
 " Ignore certain types of files on completion {{{
@@ -114,15 +115,3 @@ endif
 " }}}
 
 call pathogen#runtime_append_all_bundles()
-
-" Navigate into window with standard hjkl
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplorerMoreThanOne=1
-
-let g:debuggerMiniBufExpl = 1
-
-let python_highlight_all = 1
-let python_highlight_space_errors = 0
-
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.egg-info$', '\.egg-link', '\.egg']
