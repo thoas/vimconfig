@@ -24,6 +24,12 @@ set fileencoding=utf-8
 " }}}
 
 set nocompatible
+set title
+set visualbell
+set noerrorbells
+set shell=bash
+set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db
+
 
 " Always split window in right direction {{{
 set splitright
@@ -65,8 +71,7 @@ set tabline=%!ShortTabLine()
 set foldtext=MyFoldFunction()
 
 " Use the same symbols as TextMate for tabstops and EOLs {{{
-set list
-set listchars=tab:▸\ ,eol:¬
+set list listchars=tab:›\ ,trail:·,eol:¬ " mark trailing white space
 " }}}
 
 set dictionary+=/usr/share/dict/french

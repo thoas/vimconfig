@@ -171,3 +171,7 @@ inoremap <D-A-.> <C-R>=GetCloseTag()<CR>
 " Strip HTML tags in selected line {{{
 vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>echo<CR>
 " }}}
+
+" Django utilities {{{
+nnoremap <Leader>x :%s/{{\([A-Za-z0-9\.\|]*\)}}/{{ \1 }}/g<CR>" Replace {{var}} with {{ var }}
+" }}}
