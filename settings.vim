@@ -52,9 +52,9 @@ set ruler
 set showcmd
 set ts=4 sts=4 shiftwidth=4 expandtab
 
-" No automatic and smart indentation {{{
-set noautoindent
-set nosmartindent
+" Automatic and smart indentation {{{
+set autoindent
+set smartindent
 " }}}
 
 set showtabline=2
