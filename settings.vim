@@ -78,6 +78,11 @@ set dictionary+=/usr/share/dict/french
 set spellsuggest=5
 set langmenu=en_US.UTF-8
 
+" Persistent undo {{{
+set undofile
+set undodir=$HOME/.vim/.undo
+" }}}
+
 " Statusline {{{
 set statusline=%3*[%1*%{GetName()}%3*]%3*
 set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*
