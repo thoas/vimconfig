@@ -175,3 +175,9 @@ vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>ec
 " Django utilities {{{
 nnoremap <Leader>x :%s/{{\([A-Za-z0-9\.\|]*\)}}/{{ \1 }}/g<CR>" Replace {{var}} with {{ var }}
 " }}}
+
+" Remove trailing whitespaces
+nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Set working directory
+nnoremap <leader>. :lcd %:p:h<CR>

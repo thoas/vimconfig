@@ -83,6 +83,10 @@ set undofile
 set undodir=$HOME/.vim/.undo
 " }}}
 
+set colorcolumn=120
+
+set scrolloff=5
+
 " Statusline {{{
 set statusline=%3*[%1*%{GetName()}%3*]%3*
 set statusline+=%7*%{&modified?'\ (modified)':'\ '}%3*

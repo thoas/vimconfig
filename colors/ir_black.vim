@@ -227,3 +227,5 @@ hi User4          guifg=#ffffff     guibg=#202020        gui=NONE      ctermfg=c
 hi User5          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi User6          guifg=#00A0A0     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
 hi User7          guifg=#A8FF60     guibg=#202020        gui=NONE      ctermfg=cyan        ctermbg=NONE        cterm=NONE
+
+hi ColorColumn  guibg=#00252e
