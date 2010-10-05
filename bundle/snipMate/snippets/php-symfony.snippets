@@ -1,0 +1,46 @@
+snippet actions
+	<?php
+
+	class ${1:module}Actions extends sfActions
+	{
+	  public function execute${2:action}(sfWebRequest $request)
+	  {
+	    ${3:// your action}
+	  }
+	}
+snippet action
+	public function execute${1:action}(sfWebRequest $request)
+	{
+	  ${2:// your action}
+	}
+snippet rgp
+	$request->getParameter(${2:parameter});
+snippet task
+	<?php
+
+	class ${1:taskName}Task extends ${2:sfTask}
+	{
+		protected function configure()
+		{
+			$this->namespace = '${3:namespace}';
+	    $this->name = '${4:name}';
+	    $this->briefDescription = '${5:description}';
+			$this->detailedDescription = '';
+		}
+
+		protected function execute($arguments = array(), $options = array())
+		{
+
+		}
+	}
+snippet try
+	try {
+		
+	} catch (${1:sfException} $${2:exception})
+	{
+
+	}
+snippet fws 
+	$this->widgetSchema
+snippet fvs
+	$this->validatorSchema

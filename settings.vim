@@ -53,10 +53,10 @@ set showcmd
 set ts=4 sts=4 shiftwidth=4 expandtab
 
 " Automatic and smart indentation {{{
-set autoindent
-set smartindent
+set expandtab
 " }}}
 
+set pastetoggle=<F2>
 set showtabline=2
 set showmatch
 set viewdir=~/.vim/saveview/

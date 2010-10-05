@@ -39,7 +39,9 @@ imap <c-s> <Esc>:w<CR>a
 
 " Easy navigation, PAGE-DOWN and PAGE-UP {{{
 map <A-DOWN> gj
+map <A-j> gj
 map <A-UP> gk
+map <A-k> gk
 imap <A-UP> <ESC>gki
 imap <A-DOWN> <ESC>gkj
 " }}}
@@ -52,9 +54,7 @@ nnoremap <silent> <C-Q> :quit<CR>
 
 " Insert current date {{{
 imap \date  <C-R>=strftime("%d/%m/%Y")<CR>
-" }}}
-
-nnoremap <silent> <C-S> :call <SID>StripTrailingWhitespaces()<CR>
+"}}}
 
 " TextMate's key mapping {{{
 nmap <D-[> <<
@@ -89,9 +89,6 @@ vnoremap <D-d> m'y'>p`'
 noremap <C-S-d> m'yyP`'k
 vnoremap <C-S-d> m'y'>p`'
 " }}}
-
-" Delete the line
-" noremap <C-S-k> dd
 
 " C-TAB and C-SHIFT-TAB cycle tabs forward and backward
 nmap <c-tab> :tabnext<cr>
@@ -153,6 +150,8 @@ noremap <D-r> :e<CR>
 " Exit vim saving changes {{{
 map <leader>w :x<CR>
 " }}}
+
+map <C-S-k> :dd<CR>
 
 " Delete the current buffer with  + T {{{
 noremap <D-w> :bdelete<CR>
