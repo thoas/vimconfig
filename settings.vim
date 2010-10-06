@@ -51,6 +51,9 @@ set history=50
 set ruler
 set showcmd
 set ts=4 sts=4 shiftwidth=4 expandtab
+set wildmenu
+set wildmode=full
+set ignorecase
 
 " Automatic and smart indentation {{{
 set expandtab

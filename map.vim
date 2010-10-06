@@ -155,7 +155,6 @@ map <C-S-k> :dd<CR>
 
 " Delete the current buffer with  + T {{{
 noremap <D-w> :bdelete<CR>
-noremap <D-t> :CommandT<CR>
 " }}}
 
 " Navigate into buffers with CTRL-LEFT and CTRL-RIGHT {{{
@@ -180,3 +179,18 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
+
+" Simple indentation {{{
+vnoremap < <gv
+vnoremap > >gv|
+vnoremap <Tab> >gv|
+vnoremap <S-Tab> <gv
+nnoremap  <C-i>
+nnoremap <Tab> mzV>`zl
+nnoremap <S-Tab> mzV<`zh
+" }}}
+
+" Duplicate line {{{
+noremap <C-S-d> m'yyP`'k
+vnoremap <C-S-d> m'y'>p`'
+" }}}

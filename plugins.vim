@@ -30,3 +30,22 @@ let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.egg-info$', '\.egg-link']
 let NERDTreeChDirMode = 2
 let NERDTreeSortOrder = ['^__\.py$', '\/$', '*', '\.swp$',  '\.bak$', '\~$']
 let NERDTreeShowBookmarks = 1
+
+" FuzzyFinder {{{
+noremap <D-t> :FufFile<CR>
+map <Leader>f :FufFile<CR>
+map <Leader>b :FufBuffer<CR>
+let g:fuf_file_prompt = 'file→ '
+let g:fuf_buffer_prompt = 'buffer→ '
+let g:fuf_lines_prompt = 'line→ '
+let g:fuf_previewHeight = 20
+" }}}
+
+" MRU {{{
+map <Leader>m :MRU<CR>
+let MRU_Window_Height = 15
+" }}}
+
+" supertab {{{
+let g:SuperTabDefaultCompletionType = '<c-p>'
+" }}}
