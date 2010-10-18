@@ -48,4 +48,5 @@ let MRU_Window_Height = 15
 
 " supertab {{{
 let g:SuperTabDefaultCompletionType = '<c-p>'
+let g:SuperTabMappingForward = '<c-p>'
 " }}}

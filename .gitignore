@@ -4,3 +4,6 @@
 saveview/*
 view/*
 .undo/*
+/bundle/gundo/.hg/*
+.hgignore
+.hgtags
