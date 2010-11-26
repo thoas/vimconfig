@@ -194,3 +194,5 @@ nnoremap <S-Tab> mzV<`zh
 noremap <C-S-d> m'yyP`'k
 vnoremap <C-S-d> m'y'>p`'
 " }}}
+
+nnoremap <F5> :GundoToggle<CR>
