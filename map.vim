@@ -23,6 +23,8 @@ vnoremap <Right> <NOP>
 inoremap <Right> <NOP>
 " }}}
 
+inoremap kj <Esc>
+
 " Stop the highlighting for the 'hlsearch' option {{{
 nnoremap <silent> <C-N> :noh<CR>
 " }}}
@@ -84,8 +86,6 @@ map <F7> :exe 'sign place 001 name=mark line='.line(".").' buffer='.winbufnr(0)<
 map <C-F7> :sign unplace<CR>
 
 " Duplicate the line {{{
-noremap <D-d> m'yyP`'k
-vnoremap <D-d> m'y'>p`'
 noremap <C-S-d> m'yyP`'k
 vnoremap <C-S-d> m'y'>p`'
 " }}}
@@ -98,7 +98,7 @@ nmap <c-s-tab> :tabprevious<cr>
 imap <c-s-tab> <c-o>:tabprevious<cr>
 vmap <c-s-tab> <c-o>:tabprevious<cr>
 
-" Easy lines navigation {{{
+" Easy lines navigation when wrapped {{{
 noremap <silent> <D-j> gj
 noremap <silent> <D-k> gk
 " }}}
@@ -162,10 +162,6 @@ noremap <C-left> :bprev<CR>
 noremap <C-right> :bnext<CR>
 " }}}
 
-" TextMate autoclose mapping {{{
-inoremap <D-A-.> <C-R>=GetCloseTag()<CR>
-" }}}
-
 " Strip HTML tags in selected line {{{
 vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>echo<CR>
 " }}}
@@ -173,6 +169,13 @@ vnoremap <Leader>h :s/<\/*\([a-z][a-z0-9]*\)[^>]*>//g<CR><Esc>:silent noh<Bar>ec
 " Django utilities {{{
 nnoremap <Leader>x :%s/{{\([A-Za-z0-9\.\|]*\)}}/{{ \1 }}/g<CR>" Replace {{var}} with {{ var }}
 " }}}
+
+" source $MYVIMRC reloads the saved $MYVIMRC
+nmap <Leader>s :source $MYVIMRC
+nmap <Leader>g :source $MYGVIMRC
+
+" opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
+nmap <Leader>v :e $MYVIMRC
 
 " Remove trailing whitespaces
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
@@ -185,12 +188,6 @@ vnoremap < <gv
 vnoremap > >gv|
 vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
-nnoremap  <C-i>
 nnoremap <Tab> mzV>`zl
 nnoremap <S-Tab> mzV<`zh
-" }}}
-
-" Duplicate line {{{
-noremap <C-S-d> m'yyP`'k
-vnoremap <C-S-d> m'y'>p`'
 " }}}

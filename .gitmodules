@@ -18,7 +18,7 @@
 	url = git://repo.or.cz/vcscommand
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
-	url = git://github.com/Townk/vim-autoclose.git
+	url = https://github.com/vim-scripts/AutoClose.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://github.com/wincent/Command-T.git
@@ -72,7 +72,7 @@
 	url = https://github.com/vim-scripts/minibufexpl.vim.git
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
-	url = https://github.com/vim-scripts/delimitMate.vim.git
+	url = https://github.com/Raimondi/delimitMate.git
 [submodule "bundle/ManPageView"]
 	path = bundle/ManPageView
 	url = https://github.com/vim-scripts/ManPageView.git
@@ -82,3 +82,9 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/fuzzyfinder"]
+	path = bundle/fuzzyfinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git

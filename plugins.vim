@@ -12,7 +12,7 @@ let php_special_functions = 0
 " }}}
 
 if has("autocmd")
-    au Filetype html,xml,xsl,rhtml,htmldjango,php source $HOME/.vim/scripts/closetag.vim
+    au Filetype html,htmlphp,xml,xsl,rhtml,htmldjango,php source $HOME/.vim/scripts/closetag.vim
 endif
 "
 " Navigate into window with standard hjkl
@@ -50,3 +50,9 @@ let MRU_Window_Height = 15
 let g:SuperTabDefaultCompletionType = '<c-p>'
 let g:SuperTabMappingForward = '<c-p>'
 " }}}
+
+if !has('python')
+    let g:gundo_disable = 1
+endif
+
+let delimitMate_expand_cr = 1
