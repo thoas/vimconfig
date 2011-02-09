@@ -23,10 +23,8 @@ vnoremap <Right> <NOP>
 inoremap <Right> <NOP>
 " }}}
 
+" Easy escape {{{
 inoremap kj <Esc>
-
-" Stop the highlighting for the 'hlsearch' option {{{
-nnoremap <silent> <C-N> :noh<CR>
 " }}}
 
 inoremap <Nul> <C-x><C-o>
@@ -41,9 +39,7 @@ imap <c-s> <Esc>:w<CR>a
 
 " Easy navigation, PAGE-DOWN and PAGE-UP {{{
 map <A-DOWN> gj
-map <A-j> gj
 map <A-UP> gk
-map <A-k> gk
 imap <A-UP> <ESC>gki
 imap <A-DOWN> <ESC>gkj
 " }}}
@@ -79,11 +75,10 @@ nnoremap <S-Tab> mzV<`zh
 nmap <leader>l :set list!<CR>
 " }}}
 
-" Sign define mark text=!> texthl=Mark {{{
-map <F7> :exe 'sign place 001 name=mark line='.line(".").' buffer='.winbufnr(0)<CR>
-" }}}
-
-map <C-F7> :sign unplace<CR>
+"Sign define mark text=!> texthl=Mark {{{
+"map <F7> :exe 'sign place 001 name=mark line='.line(".").' buffer='.winbufnr(0)<CR>
+"map <C-F7> :sign unplace<CR>
+"}}}
 
 " Duplicate the line {{{
 noremap <C-S-d> m'yyP`'k
@@ -101,6 +96,16 @@ vmap <c-s-tab> <c-o>:tabprevious<cr>
 " Easy lines navigation when wrapped {{{
 noremap <silent> <D-j> gj
 noremap <silent> <D-k> gk
+" }}}
+
+" Easy line moving {{{
+noremap <C-Up> ddkkp
+noremap <C-Down> ddp
+" }}}
+
+" Duplicate line {{{
+noremap <D-d> m'yyP`'k
+vnoremap <D-d> m'y'>p`'
 " }}}
 
 " Reload the current file {{{
@@ -135,10 +140,6 @@ nmap <D-6> g^
 nmap <D-0> g^
 " }}}
 
-" Save changes {{{
-map <leader>s :w<CR>
-" }}}
-
 " Exit vim without saving any changes {{{
 map <leader>q :q!<CR>
 " }}}
@@ -150,8 +151,6 @@ noremap <D-r> :e<CR>
 " Exit vim saving changes {{{
 map <leader>w :x<CR>
 " }}}
-
-map <C-S-k> :dd<CR>
 
 " Delete the current buffer with  + T {{{
 noremap <D-w> :bdelete<CR>
@@ -190,4 +189,15 @@ vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
 nnoremap <Tab> mzV>`zl
 nnoremap <S-Tab> mzV<`zh
+" }}}
+
+" Always go to the mark’s line and column {{{
+noremap ' `
+vnoremap ' `
+noremap g' g`
+vnoremap g' g`
+" }}}
+
+" Remap Enter and Backspace {{{
+vnoremap <BS> dk$
 " }}}
