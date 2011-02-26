@@ -28,6 +28,7 @@ if has("autocmd")
     autocmd FileType html                               setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css                                setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType javascript                         setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType python                             compiler pylint
 
     " Treat .rss files as XML
     autocmd BufNewFile,BufRead *.rss                    setfiletype xml

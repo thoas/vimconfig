@@ -12,7 +12,7 @@ let php_special_functions = 0
 " }}}
 
 if has("autocmd")
-    au Filetype html,htmlphp,xml,xsl,rhtml,htmldjango,php source $HOME/.vim/scripts/closetag.vim
+    au Filetype html,markdown,textile,htmlphp,xml,xsl,rhtml,htmldjango,php source $HOME/.vim/scripts/closetag.vim
 endif
 "
 " Navigate into window with standard hjkl
@@ -56,3 +56,5 @@ if !has('python')
 endif
 
 let delimitMate_expand_cr = 1
+
+let g:pylint_onwrite = 0
