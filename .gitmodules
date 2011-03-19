@@ -97,3 +97,12 @@
 [submodule "bundle/pyflakes"]
 	path = bundle/pyflakes
 	url = https://github.com/kevinw/pyflakes-vim.git
+[submodule "bundle/pylint"]
+	path = bundle/pylint
+	url = https://github.com/vim-scripts/pylint.vim.git
+[submodule "bundle/jslint"]
+	path = bundle/jslint
+	url = https://github.com/hallettj/jslint.vim.git
+[submodule "bundle/strftimedamnit"]
+	path = bundle/strftimedamnit
+	url = https://github.com/sjl/strftimedammit.vim.git

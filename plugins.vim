@@ -48,7 +48,7 @@ let MRU_Window_Height = 15
 
 " supertab {{{
 let g:SuperTabDefaultCompletionType = '<c-p>'
-let g:SuperTabMappingForward = '<c-p>'
+let g:SuperTabMappingForward = '<c-space>'
 " }}}
 
 if !has('python')
@@ -58,3 +58,6 @@ endif
 let delimitMate_expand_cr = 1
 
 let g:pylint_onwrite = 0
+let g:pylint_cwindow = 0
+let g:pylint_show_rate = 0
+let g:pyflakes_use_quickfix = 0
