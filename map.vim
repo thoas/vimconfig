@@ -201,3 +201,5 @@ vnoremap g' g`
 " Remap Enter and Backspace {{{
 vnoremap <BS> dk$
 " }}}
+
+nnoremap <leader><space> :nohlsearch<cr>

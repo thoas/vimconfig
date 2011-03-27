@@ -120,3 +120,11 @@ function! GetName()
 endfunction
 
 command! -nargs=* Wrap set wrap linebreak nolist
+
+function! ToggleRelativeAbsoluteNumber()
+  if &number
+    set relativenumber
+  else
+    set number
+  endif
+endfunction
