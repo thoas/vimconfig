@@ -109,15 +109,24 @@
 [submodule "bundle/vim-pep8"]
 	path = bundle/vim-pep8
 	url = git://github.com/nvie/vim-pep8.git
-[submodule "bundle/pydiction"]
-	path = bundle/pydiction
-	url = git://github.com/vim-scripts/Pydiction.git
-[submodule "bundle/tasklist"]
-	path = bundle/tasklist
-	url = git://github.com/vim-scripts/TaskList.vim.git
 [submodule "bundle/jsbeautify"]
 	path = bundle/jsbeautify
 	url = git://github.com/vim-scripts/jsbeautify.git
 [submodule "bundle/vim-rooter"]
 	path = bundle/vim-rooter
 	url = git://github.com/airblade/vim-rooter.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/vim-extradite"]
+	path = bundle/vim-extradite
+	url = https://github.com/int3/vim-extradite.git
+[submodule "bundle/nginx"]
+	path = bundle/nginx
+	url = git://github.com/vim-scripts/nginx.vim.git
+[submodule "bundle/vim-git"]
+	path = bundle/vim-git
+	url = git://github.com/tpope/vim-git.git
+[submodule "bundle/php53"]
+	path = bundle/php53
+	url = git://github.com/vim-scripts/php.vim--Garvin.git
