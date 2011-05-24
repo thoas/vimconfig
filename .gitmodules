@@ -13,15 +13,9 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = http://github.com/mileszs/ack.vim.git
-[submodule "bundle/vcscommand"]
-	path = bundle/vcscommand
-	url = git://repo.or.cz/vcscommand
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = https://github.com/vim-scripts/AutoClose.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://github.com/wincent/Command-T.git
 [submodule "bundle/gist"]
 	path = bundle/gist
 	url = git://github.com/mattn/gist-vim.git
@@ -76,9 +70,6 @@
 [submodule "bundle/ManPageView"]
 	path = bundle/ManPageView
 	url = https://github.com/vim-scripts/ManPageView.git
-[submodule "bundle/cvim"]
-	path = bundle/cvim
-	url = https://github.com/vim-scripts/c.vim.git
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git

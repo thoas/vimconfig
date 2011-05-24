@@ -203,3 +203,12 @@ vnoremap <BS> dk$
 " }}}
 
 nnoremap <leader><space> :nohlsearch<cr>
+
+" Tmux-like split panes navigation {{{
+noremap <C-A>% :vsplit<CR><C-W>l
+noremap <C-A>s :split<CR><C-W>j
+noremap <C-A>h <C-W>h
+noremap <C-A>l <C-W>l
+noremap <C-A>k <C-W>k
+noremap <C-A>j <C-W>j
+" }}}
