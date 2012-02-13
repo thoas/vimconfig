@@ -29,7 +29,6 @@ if has("autocmd")
     autocmd FileType css                                setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType sass                               setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType javascript                         setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType python                             compiler pylint
 
     " Treat .rss files as XML
     autocmd BufNewFile,BufRead *.rss                    setfiletype xml
@@ -44,6 +43,7 @@ if has("autocmd")
     au filetype python                                  set omnifunc=pythoncomplete#Complete
     au filetype xml                                     set omnifunc=xmlcomplete#CompleteTags
     autocmd FileType python                             set omnifunc=pythoncomplete#Complete colorcolumn=80
+    autocmd FileType python                             compiler pylint
 
     au! BufRead,BufNewFile *.py                         setfiletype django
     au! BufRead,BufNewFile *.php                        setfiletype php
@@ -52,6 +52,8 @@ if has("autocmd")
     au! BufRead,BufNewFile *.tpl.html,*.tpl             setfiletype htmlphp
     au! BufRead,BufNewFile *.phtml                      setfiletype htmlphp
     au! BufNewFile,BufRead *.html,*.htm                 call s:SelectHTML()
+    au BufRead,BufNewFile *.pp                          set filetype=puppet
+    autocmd BufNewFile,BufRead *.jade setf haml
 
     augroup markdown
         au! BufRead,BufNewFile *.mkd                    setfiletype mkd
@@ -63,8 +65,16 @@ if has("autocmd")
     au! BufRead,BufNewFile *.conf                       setfiletype apache
     au! BufRead,BufNewFile *.as                         setfiletype javascript
     au! BufRead,BufNewFile *.js                         setfiletype javascript.jquery
+    au BufNewFile,BufRead *.json                        setfiletype json
 
     autocmd BufEnter *.txt                              set filetype=text
     autocmd BufEnter *.todo                             set filetype=todo
+
+    au BufNewFile,BufRead admin.py                      setlocal filetype=python.django
+    au BufNewFile,BufRead urls.py                       setlocal filetype=python.django
+    au BufNewFile,BufRead models.py                     setlocal filetype=python.django
+    au BufNewFile,BufRead views.py                      setlocal filetype=python.django
+    au BufNewFile,BufRead settings.py                   setlocal filetype=python.django
+    au BufNewFile,BufRead forms.py                      setlocal filetype=python.django
 endif
 " }}}

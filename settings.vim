@@ -1,3 +1,5 @@
+call pathogen#runtime_append_all_bundles()
+
 if has('gui_running')
     syntax on
     colorscheme ir_black
@@ -103,6 +105,9 @@ set statusline+=%3*,%4*%{&sts}
 set statusline+=%3*,%4*%{&sw}
 set statusline+=%3*,%4*%{&et?'et':'noet'}\ \ 
 set statusline+=%<%3*pwd:%4*%{getcwd()}\ \ 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 set statusline+=%=
 set statusline+=%3*col:%4*%c\ \ 
 set statusline+=%3*line:%4*%l\ \ 
@@ -130,5 +135,3 @@ else
   endif
 endif
 " }}}
-
-call pathogen#runtime_append_all_bundles()

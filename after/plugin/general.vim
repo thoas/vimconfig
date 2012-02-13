@@ -4,7 +4,7 @@ if exists('loaded_taglist')
     let Tlist_Inc_Winwidth = 1
     let Tlist_Max_Submenu_Items = 15
     let tlist_php_settings = 'php;c:class;d:constant;f:function'
-    let Tlist_Ctags_Cmd="/opt/local/bin/ctags"
+    let Tlist_Ctags_Cmd="ctags"
     let Tlist_Auto_Open=0
     let Tlist_Use_Right_Window=1
     let Tlist_Sort_Type="name"

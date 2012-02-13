@@ -9,19 +9,24 @@ map <leader>et :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " }}}
 
 " Remove support for regular arrow key {{{
-nnoremap <Up> <Esc>
-vnoremap <Up> <NOP>
-inoremap <Up> <NOP>
-nnoremap <Down> <Esc>
-vnoremap <Down> <NOP>
-inoremap <Down> <NOP>
-nnoremap <Left> <Esc>
-vnoremap <Left> <NOP>
-inoremap <Left> <NOP>
-nnoremap <Right> <Esc>
-vnoremap <Right> <NOP>
-inoremap <Right> <NOP>
+"nnoremap <Up> <Esc>
+"vnoremap <Up> <NOP>
+"inoremap <Up> <NOP>
+"nnoremap <Down> <Esc>
+"vnoremap <Down> <NOP>
+"inoremap <Down> <NOP>
+"nnoremap <Left> <Esc>
+"vnoremap <Left> <NOP>
+"inoremap <Left> <NOP>
+"nnoremap <Right> <Esc>
+"vnoremap <Right> <NOP>
+"inoremap <Right> <NOP>
 " }}}
+
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+noremap <C-K> <C-W>k
+noremap <C-J> <C-W>j
 
 " Easy escape {{{
 inoremap kj <Esc>
@@ -212,3 +217,28 @@ noremap <C-A>l <C-W>l
 noremap <C-A>k <C-W>k
 noremap <C-A>j <C-W>j
 " }}}
+
+nnoremap _dt :set ft=htmldjango<CR>
+nnoremap _pd :set ft=python.django<CR>
+
+" Map Command-# to switch tabs
+map  <D-0> 0gt
+imap <D-0> <Esc>0gt
+map  <D-1> 1gt
+imap <D-1> <Esc>1gt
+map  <D-2> 2gt
+imap <D-2> <Esc>2gt
+map  <D-3> 3gt
+imap <D-3> <Esc>3gt
+map  <D-4> 4gt
+imap <D-4> <Esc>4gt
+map  <D-5> 5gt
+imap <D-5> <Esc>5gt
+map  <D-6> 6gt
+imap <D-6> <Esc>6gt
+map  <D-7> 7gt
+imap <D-7> <Esc>7gt
+map  <D-8> 8gt
+imap <D-8> <Esc>8gt
+map  <D-9> 9gt
+imap <D-9> <Esc>9gt
