@@ -29,12 +29,6 @@ if exists('loaded_nerd_comments')
     map <D-S-/> <plug>NERDCommenterToggle
 endif
 
-if exists('loaded_supertab')
-    " Use CTRL-SPACE for omni completion
-    let g:SuperTabMappingForward = "<C-Space>"
-    imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-p>")<cr>
-endif
-
 if exists('g:autoclose_loaded')
     nmap <leader>x <Plug>ToggleAutoCloseMappings
 endif

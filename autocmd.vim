@@ -10,7 +10,7 @@ fun! s:SelectHTML()
         let n = n + 1
     endwhile
     " go with html
-    set ft=htmlphp
+    set ft=html
 endfun
 
 " Only do this part when compiled with support for autocommands {{{
@@ -28,7 +28,7 @@ if has("autocmd")
     autocmd FileType html                               setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css                                setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType sass                               setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType javascript                         setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType javascript                         setlocal ts=2 sts=2 sw=2 expandtab
 
     " Treat .rss files as XML
     autocmd BufNewFile,BufRead *.rss                    setfiletype xml
