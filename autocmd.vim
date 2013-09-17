@@ -13,6 +13,13 @@ fun! s:SelectHTML()
     set ft=html
 endfun
 
+function! s:setupWrapping()
+  set wrap
+  set linebreak
+  set textwidth=72
+  set nolist
+endfunction
+
 " Only do this part when compiled with support for autocommands {{{
 if has("autocmd")
     " Enable file type detection
@@ -45,7 +52,7 @@ if has("autocmd")
     autocmd FileType python                             set omnifunc=pythoncomplete#Complete colorcolumn=80
     autocmd FileType python                             compiler pylint
 
-    au! BufRead,BufNewFile *.py                         setfiletype django
+    au! BufRead,BufNewFile *.py                         setfiletype python.django
     au! BufRead,BufNewFile *.php                        setfiletype php
     au! BufRead,BufNewFile *.phps                       setfiletype php
     au! BufRead,BufNewFile *.php.html                   setfiletype htmlphp
@@ -54,6 +61,8 @@ if has("autocmd")
     au! BufNewFile,BufRead *.html,*.htm                 call s:SelectHTML()
     au BufRead,BufNewFile *.pp                          set filetype=puppet
     autocmd BufNewFile,BufRead *.jade setf haml
+
+    au! BufRead,BufNewFile *.scala.html                   setfiletype scala
 
     augroup markdown
         au! BufRead,BufNewFile *.mkd                    setfiletype mkd
@@ -64,7 +73,7 @@ if has("autocmd")
 
     au! BufRead,BufNewFile *.conf                       setfiletype apache
     au! BufRead,BufNewFile *.as                         setfiletype javascript
-    au! BufRead,BufNewFile *.js                         setfiletype javascript.jquery
+    au! BufRead,BufNewFile *.js                         setfiletype javascript
     au BufNewFile,BufRead *.json                        setfiletype json
 
     autocmd BufEnter *.txt                              set filetype=text
@@ -76,5 +85,9 @@ if has("autocmd")
     au BufNewFile,BufRead views.py                      setlocal filetype=python.django
     au BufNewFile,BufRead settings.py                   setlocal filetype=python.django
     au BufNewFile,BufRead forms.py                      setlocal filetype=python.django
+
+    au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
+
+    "au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
 endif
 " }}}

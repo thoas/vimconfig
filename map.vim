@@ -176,7 +176,6 @@ nnoremap <Leader>x :%s/{{\([A-Za-z0-9\.\|]*\)}}/{{ \1 }}/g<CR>" Replace {{var}} 
 
 " source $MYVIMRC reloads the saved $MYVIMRC
 nmap <Leader>s :source $MYVIMRC
-nmap <Leader>g :source $MYGVIMRC
 
 " opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
 nmap <Leader>v :e $MYVIMRC
@@ -219,6 +218,7 @@ noremap <C-A>j <C-W>j
 " }}}
 
 nnoremap _dt :set ft=htmldjango<CR>
+nnoremap _dh :set ft=html<CR>
 nnoremap _pd :set ft=python.django<CR>
 
 " Map Command-# to switch tabs
@@ -242,3 +242,6 @@ map  <D-8> 8gt
 imap <D-8> <Esc>8gt
 map  <D-9> 9gt
 imap <D-9> <Esc>9gt
+
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.\|s/./=/g\|:nohls<cr>

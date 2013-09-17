@@ -20,6 +20,10 @@ if exists("loaded_matchit")
     \ '{% *with .*%}:{% *endwith *%},' .
     \ '{% *comment .*%}:{% *endcomment *%},' .
     \ '{% *block .*%}:{% *endblock *%},' .
+    \ '{% *blocktrans .*%}:{% *endblocktrans *%},' .
     \ '{% *filter .*%}:{% *endfilter *%},' .
-    \ '{% *spaceless .*%}:{% *endspaceless *%}'
+    \ '{% *spaceless .*%}:{% *endspaceless *%}' .
+    \ '{% *compress .*%}:{% *endcompress *%}' .
+    \ '{% *autoescape .*%}:{% *endautoescape *%}' .
+    \ '{% *thumbnail .*%}:{% *thumbnail *%}'
 endif

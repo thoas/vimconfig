@@ -26,7 +26,7 @@ let python_highlight_all = 1
 let did_django_syn_inits = 1
 let python_highlight_space_errors = 0
 
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.egg-info$', '\.egg-link']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.egg-info$', '\.egg-link', '\.class']
 let NERDTreeChDirMode = 2
 let NERDTreeSortOrder = ['^__\.py$', '\/$', '*', '\.swp$',  '\.bak$', '\~$']
 let NERDTreeShowBookmarks = 1
@@ -37,8 +37,10 @@ let g:ctrlp_working_path_mode = 2
 nnoremap <silent> <D-t> :CtrlP<CR>
 nnoremap <silent> <D-r> :CtrlPMRU<CR>
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-    \ 'file': '\.exe$\|\.so$\|\.dll$' }
+\ 'dir':  '\.git$\|\.hg$\|\.svn$',
+\ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+\ }
+
 
 " }}}
 
@@ -219,7 +221,13 @@ let g:gist_open_browser_after_post = 1
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
-"let g:syntastic_quiet_warnings=1
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_django_flake8_args = '--ignore=E501'
+let g:syntastic_django_flake8_args = '--ignore=E501'
+let g:syntastic_python_flake8_args = '--ignore=E501'
+
+let s:opt_indent_size = 4
+let s:opt_indent_char = " "
 
 let $JS_CMD='node'
 
@@ -269,11 +277,6 @@ inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')

@@ -43,9 +43,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
@@ -103,9 +100,6 @@
 [submodule "bundle/jquery"]
 	path = bundle/jquery
 	url = git://github.com/vim-scripts/jQuery.git
-[submodule "bundle/vim-twig"]
-	path = bundle/vim-twig
-	url = git://github.com/beyondwords/vim-twig.git
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/leshill/vim-json.git
@@ -121,9 +115,12 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/PIV"]
-	path = bundle/PIV
-	url = git://github.com/spf13/PIV.git
 [submodule "bundle/neocomplcache"]
 	path = bundle/neocomplcache
 	url = git://github.com/Shougo/neocomplcache.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule "bundle/vim-sensible"]
+	path = bundle/vim-sensible
+	url = git://github.com/tpope/vim-sensible.git
