@@ -34,8 +34,9 @@ if has("autocmd")
     " Customisations based on house-style (arbitrary    )
     autocmd FileType html                               setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css                                setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType sass                               setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType sass                               setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType javascript                         setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType scala                              setlocal ts=2 sts=2 sw=2 expandtab
 
     " Treat .rss files as XML
     autocmd BufNewFile,BufRead *.rss                    setfiletype xml
@@ -50,7 +51,6 @@ if has("autocmd")
     au filetype python                                  set omnifunc=pythoncomplete#Complete
     au filetype xml                                     set omnifunc=xmlcomplete#CompleteTags
     autocmd FileType python                             set omnifunc=pythoncomplete#Complete colorcolumn=80
-    autocmd FileType python                             compiler pylint
 
     au! BufRead,BufNewFile *.py                         setfiletype python.django
     au! BufRead,BufNewFile *.php                        setfiletype php

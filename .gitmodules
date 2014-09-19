@@ -94,9 +94,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "bundle/pylint"]
-	path = bundle/pylint
-	url = https://github.com/vim-scripts/pylint.vim.git
 [submodule "bundle/jquery"]
 	path = bundle/jquery
 	url = git://github.com/vim-scripts/jQuery.git
@@ -115,12 +112,12 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/neocomplcache"]
-	path = bundle/neocomplcache
-	url = git://github.com/Shougo/neocomplcache.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = https://github.com/fatih/vim-go

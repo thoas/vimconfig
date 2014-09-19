@@ -51,6 +51,12 @@ let MRU_Window_Height = 15
 
 if !has('python')
     let g:gundo_disable = 1
+    nnoremap <F5> :GundoToggle<CR>
+
+    let g:gundo_debug = 1
+    let g:gundo_preview_bottom = 1
+    let g:gundo_tree_statusline = "Gundo"
+    let g:gundo_preview_statusline = "Gundo Preview"
 endif
 
 let delimitMate_expand_cr = 1
@@ -222,6 +228,7 @@ let g:gist_open_browser_after_post = 1
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_python_django_flake8_args = '--ignore=E501'
 let g:syntastic_django_flake8_args = '--ignore=E501'
 let g:syntastic_python_flake8_args = '--ignore=E501'
@@ -232,15 +239,36 @@ let s:opt_indent_char = " "
 let $JS_CMD='node'
 
 " Fugitive {
-nnoremap <silent> <leader>gs :Gstatus<CR>
-nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>gb :Gblame<CR>
-nnoremap <silent> <leader>gl :Glog<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gw :Gwrite<cr>
+nnoremap <leader>ga :Gadd<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gco :Gcheckout<cr>
+nnoremap <leader>gci :Gcommit<cr>
+nnoremap <leader>gm :Gmove<cr>
+nnoremap <leader>gr :Gremove<cr>
+nnoremap <leader>gl :Shell git gl -18<cr>:wincmd \|<cr>
+
+augroup ft_fugitive
+    au!
+
+    au BufNewFile,BufRead .git/index setlocal nolist
+augroup END
 "}
 
 let g:DisableAutoPHPFolding = 1
+
+" For snippet_complete marker.
+if has('conceal')
+    set conceallevel=2 concealcursor=i
+endif
+" }
+"
+
+let s:opt_indent_size = 4
+let s:opt_indent_char = " "
+
 
 " neocomplcache {
 let g:neocomplcache_enable_at_startup = 1
@@ -287,9 +315,3 @@ let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-
-" For snippet_complete marker.
-if has('conceal')
-    set conceallevel=2 concealcursor=i
-endif
-" }
