@@ -16,9 +16,6 @@
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = https://github.com/vim-scripts/AutoClose.git
-[submodule "bundle/gist"]
-	path = bundle/gist
-	url = git://github.com/mattn/gist-vim.git
 [submodule "bundle/sudo"]
 	path = bundle/sudo
 	url = git://github.com/vim-scripts/sudo.vim.git
@@ -67,9 +64,6 @@
 [submodule "bundle/pyflakes"]
 	path = bundle/pyflakes
 	url = https://github.com/kevinw/pyflakes-vim.git
-[submodule "bundle/jslint"]
-	path = bundle/jslint
-	url = https://github.com/hallettj/jslint.vim.git
 [submodule "bundle/strftimedamnit"]
 	path = bundle/strftimedamnit
 	url = https://github.com/sjl/strftimedammit.vim.git
@@ -88,9 +82,6 @@
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = git://github.com/tpope/vim-git.git
-[submodule "bundle/puppet"]
-	path = bundle/puppet
-	url = git://github.com/ajf/puppet-vim.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
@@ -103,9 +94,6 @@
 [submodule "bundle/vim-stylus"]
 	path = bundle/vim-stylus
 	url = https://github.com/wavded/vim-stylus.git
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
@@ -121,3 +109,18 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = git@github.com:Shougo/neocomplete.vim.git
+[submodule "bundle/neosnippet"]
+	path = bundle/neosnippet
+	url = git@github.com:Shougo/neosnippet.vim.git
+[submodule "bundle/neosnippet-snippets"]
+	path = bundle/neosnippet-snippets
+	url = git@github.com:Shougo/neosnippet-snippets.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = git@github.com:bling/vim-airline.git
