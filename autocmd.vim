@@ -52,6 +52,7 @@ if has("autocmd")
     au filetype xml                                     set omnifunc=xmlcomplete#CompleteTags
     autocmd FileType python                             set omnifunc=pythoncomplete#Complete colorcolumn=80
 
+    au! BufRead,BufNewFile *.es6                        setfiletype javascript
     au! BufRead,BufNewFile *.py                         setfiletype python.django
     au! BufRead,BufNewFile *.php                        setfiletype php
     au! BufRead,BufNewFile *.phps                       setfiletype php
