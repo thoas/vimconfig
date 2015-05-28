@@ -85,7 +85,7 @@ set langmenu=en_US.UTF-8
 
 " Persistent undo {{{
 set undofile
-set undodir=$HOME/.vim/.undo
+set undodir=$HOME/.undo
 " }}}
 
 set colorcolumn=120
