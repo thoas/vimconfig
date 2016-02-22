@@ -84,8 +84,8 @@ set spellsuggest=5
 set langmenu=en_US.UTF-8
 
 " Persistent undo {{{
-set undofile
-set undodir=$HOME/.undo
+" set undofile
+" set undodir=$HOME/.undo
 " }}}
 
 set colorcolumn=120
@@ -135,3 +135,5 @@ else
   endif
 endif
 " }}}
+
+set completeopt-=preview
